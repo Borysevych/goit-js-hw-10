@@ -55,7 +55,7 @@ function onInputCountry(e) {
         return;
       }
 
-      if (countries.length <= 10) {
+      if (countries.length >= 2 && countries.length <= 10) {
         const listMarkup = countries.map(country => getCountryList(country));
         refs.countryList.innerHTML = listMarkup.join('');
         refs.countryInfo.innerHTML = '';
